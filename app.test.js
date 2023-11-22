@@ -53,6 +53,18 @@ describe("CRUD Operations", () => {
         expect(response.body).toHaveProperty("message", "Product updated successfully.");
     });
 
+    it("should update the previously created product", async () => {
+        const productId = createdProductId;
+        const updatedProduct = { name: "Updated Product", price: 30 };
+
+        const response = await request(app)
+            .patch(`/products/${productId}`)
+            .send(updatedProduct)
+            .expect(200);
+
+        expect(response.body).toHaveProperty("message", "Product updated successfully.");
+    });
+
     it("should delete the previously created product", async () => {
         if (createdProductId) {
             const response = await request(app)
