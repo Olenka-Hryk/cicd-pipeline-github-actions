@@ -4,7 +4,7 @@ const sqlite3 = require("sqlite3").verbose();
 const cors = require("cors");
 require("dotenv").config();
 
-//Cnfigure ports
+//Configure ports
 const args = process.argv;
 const p_index = args.indexOf("--p");
 const cp_index = args.indexOf("--cp");
@@ -63,7 +63,7 @@ app.get("/products", (req, res) => {
       res.status(500).json({ error: err.message });
       return;
     }
-    res.json(rows);
+    res.json({message: "Not work"});
   });
 });
 
