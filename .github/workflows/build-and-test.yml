@@ -4,10 +4,10 @@ run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   # Triggers the workflow on push and pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ main, develop ]
   pull_request:
     types: [ opened, synchronize ]
-    branches: [ "main" ]
+    branches: [ main, develop ]
     
   # Allow to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -55,7 +55,7 @@ jobs:
            
       # Execute the build script
       - name: Build project
-        run: npm run
+        run: npm run build
 
       # Execute unit tests
       - run: echo "The workflow is now ready to test your code on the runner."
