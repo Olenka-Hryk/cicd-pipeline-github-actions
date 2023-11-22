@@ -41,6 +41,15 @@ describe("CRUD Operations", () => {
         expect(response.body).toHaveLength(6);
     });
 
+    it("should find product by productId", async () => {
+        const productId = 2;
+        const response = await request(app)
+            .get(`/products/${productId}`)
+            .expect(200);
+
+        expect(response.body).toHaveProperty("name", "Sult");
+    });
+
     it("should update an existing product", async () => {
         const productId = 1;
         const updatedProduct = { name: "Updated Product", price: 30 };
