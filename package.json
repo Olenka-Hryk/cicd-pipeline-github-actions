@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "build": "tsc",
-    "test": "jest --forceExit"
+    "test": "jest --forceExit",
+    "sonar": "node sonar-project.js"
   },
   "keywords": [],
   "author": "",
