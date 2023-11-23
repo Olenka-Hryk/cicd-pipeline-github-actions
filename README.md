@@ -1,4 +1,5 @@
 [![Continuous Integration](https://github.com/Olenka-Hryk/cicd-pipeline-github-actions/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Olenka-Hryk/cicd-pipeline-github-actions/actions/workflows/build-and-test.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Olenka-Hryk_cicd-pipeline-github-actions&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Olenka-Hryk_cicd-pipeline-github-actions)
 
 # Description
 This project is the Node.js backend part of an educational  project. It provides connection to DB, implements CRUD operations and sends responses to requests. 
